@@ -65,6 +65,13 @@ public class Main {
         return result;
     }
 
+    public static Set<Integer> streamIFMCps(List<Student> studentList) {
+        Set<Integer> result = new HashSet<>();
+        studentList.stream().filter(Student::isIFM).map(Student::cps).forEach(result::add);
+        retun result;
+    }
+
+
     /**
      * Task III: Random.
      *
