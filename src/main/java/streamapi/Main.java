@@ -80,8 +80,8 @@ public class Main {
         Random r = new Random();
         List<Integer> randomIntegers = new ArrayList<>();
 
-        //Stream<Integer> intStream = Stream.generate();
-        //intStream.forEach(randomIntegers::add);
+        Stream<Integer> intStream = Stream.generate(() -> r.nextInt(10));
+        intStream.limit(10).forEach(randomIntegers::add);
 
         List<Integer> returnList = new ArrayList<>();
 
