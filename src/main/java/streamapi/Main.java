@@ -74,7 +74,8 @@ public class Main {
      */
     private static InputStream getResourceAsStream(String path) {
         // TODO
-        throw new UnsupportedOperationException();
+        InputStream stream = Main.class.getResourceAsStream(path);
+        return stream;
     }
 
     /**
