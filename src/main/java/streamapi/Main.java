@@ -49,6 +49,17 @@ public class Main {
     }
 
     /**
+     * <p>Calculate the total credits earned by all students.
+     * @param studentList List of students
+     * @return Sum of credit points of all students of the given list
+     */
+    public static Integer streamStudents(List<Student> studentList){
+        //mit Lambda-Ausruck: ...map(student->student.cps()).sum();
+        return studentList.stream().map(Student::cps).sum();
+
+    }
+
+    /**
      * Task II: Set of ECTS of all IFM students.
      *
      * <p>Identify the different credit points of all IFM students.
