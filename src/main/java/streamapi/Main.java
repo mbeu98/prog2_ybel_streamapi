@@ -14,7 +14,7 @@ public class Main {
 
         // Task I: Students
         System.out.println(
-                students(
+                streamStudents(
                         List.of(
                                 new Student("A", 30, Enrollment.IFM),
                                 new Student("B", 45, Enrollment.IFM),
@@ -54,8 +54,8 @@ public class Main {
      * @return Sum of credit points of all students of the given list
      */
     public static Integer streamStudents(List<Student> studentList){
-        //mit Lambda-Ausruck: ...map(student->student.cps()).sum();
-        return studentList.stream().map(Student::cps).sum();
+        //mit Lambda-Ausruck: ...map(student->student.cps());
+        return studentList.stream().map(Student::cps).reduce(0,(a,b)->a+b);
 
     }
 
