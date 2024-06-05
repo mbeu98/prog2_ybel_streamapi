@@ -103,12 +103,17 @@ public class Main {
                 newLine = r.readLine();
             }
 
-            for (int i = 1; i < allLines.size(); i++) {
+            /*for (int i = 1; i < allLines.size(); i++) {
                 String s = allLines.get(i);
                 if (s.startsWith("a") && !(s.length() < 2)) {
                     result.append(allLines.get(i) + "\n");
                 }
-            }
+            }*/
+
+            allLines.stream().filter(s -> s.startsWith("a") && !(s.length() < 2)).forEach(s -> result.append(s + "\n"));
+
+
+
 
         } catch (IOException e) {
             System.err.println("Ouch, that didn't work: \n" + e.getMessage());

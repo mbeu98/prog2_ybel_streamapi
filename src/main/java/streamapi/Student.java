@@ -87,3 +87,6 @@ public final class Student {
                 + ']';
     }
 }
+
+// public record Student(String name,int cps, Enrollment program) {
+// public boolean isIFM() {return program == Enrollment.IFM;}}
